@@ -10,4 +10,12 @@ export default defineConfig({
   jsxFactory: 'h',
   jsxFragment: 'Fragment',
  },
+ build: {
+  lib: {
+   entry: './src/main.jsx',
+  },
+  rollupOptions: {
+   external: ['react', 'react-dom'],
+  },
+ },
 });

@@ -1,4 +1,11 @@
 {
+  "exclude": ["node_modules"],
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "*": ["src/*"]
+    }
+  },
  "extends": "./jsconfig.paths.json",
  {
    "compilerOptions": {
