@@ -1,4 +1,4 @@
-# Project with React, Vite, Firebase, FireStore, React Router, Toastify and PNPM
+# Project with React, Vite, Firebase, FireStore, React Router, Toastify, Leaflet and PNPM
 
 ## **Market House App**
 
@@ -237,5 +237,27 @@ What is inside of query is the parameters we need from are database to be render
   fetchListings();
  }, [params.categoryName]);
 
+
+```
+
+### Adding Leaflet and React-Leaflet
+
+```
+pnpm i leaflet react-leaflet
+
+     <MapContainer
+      style={{ height: '100%', width: '100%' }}
+      center={[listing.geolocation.lat, listing.geolocation.lng]}
+      zoom={13}
+      scrollWheelZoom={false}>
+      <TileLayer
+       attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+       url='https://{s}.tile.openstreetmap.de/tiles/osmde/{z}/{x}/{y}.png'
+      />
+
+      <Marker position={[listing.geolocation.lat, listing.geolocation.lng]}>
+       <Popup>{listing.location}</Popup>
+      </Marker>
+     </MapContainer>
 
 ```
