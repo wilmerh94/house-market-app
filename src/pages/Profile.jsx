@@ -12,11 +12,11 @@ import {
   where
 } from 'firebase/firestore';
 import { useEffect, useState } from 'react';
+import { FaArrowRight } from 'react-icons/fa';
 import { Link, useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import { db } from '../../firebase.config';
 import homeIcon from '../assets/svg/homeIcon.svg';
-import arrowRight from '../assets/svg/keyboardArrowRightIcon.svg';
 import { ListingItem } from '../components/ListItem/ListingItem';
 
 export const Profile = () => {
@@ -158,7 +158,7 @@ export const Profile = () => {
         <Link to="/create-listing" className="createListing">
           <img src={homeIcon} alt="home" />
           <p>Sell or rent your home</p>
-          <img src={arrowRight} alt="arrow right" />
+          <FaArrowRight />
         </Link>
 
         {!loading && listings?.length > 0 && (

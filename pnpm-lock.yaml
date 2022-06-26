@@ -22,6 +22,7 @@ specifiers:
   react: ^18.2.0
   react-dom: ^18.2.0
   react-geolocated: ^4.0.3
+  react-icons: ^4.4.0
   react-leaflet: ^4.0.1
   react-router-dom: ^6.3.0
   react-toastify: ^9.0.5
@@ -39,6 +40,7 @@ dependencies:
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
   react-geolocated: 4.0.3_react@18.2.0
+  react-icons: 4.4.0_react@18.2.0
   react-leaflet: 4.0.1_zklzwh7pdkx5k4fi5tz77jtq6y
   react-router-dom: 6.3.0_biqbaboplfbrettd7655fr4n2y
   react-toastify: 9.0.5_biqbaboplfbrettd7655fr4n2y
@@ -3786,6 +3788,14 @@ packages:
     resolution: {integrity: sha512-p+BObdbWT4kINILkUZtqkWHippBsCLnQ+dyx9Bnd+m3086Xkw7VKWxcFavCd2pG6AM50jsiMJiDu0+DjelnT9g==}
     peerDependencies:
       react: '>= 16.8.0 < 19.0.0'
+    dependencies:
+      react: 18.2.0
+    dev: false
+
+  /react-icons/4.4.0_react@18.2.0:
+    resolution: {integrity: sha512-fSbvHeVYo/B5/L4VhB7sBA1i2tS8MkT0Hb9t2H1AVPkwGfVHLJCqyr2Py9dKMxsyM63Eng1GkdZfbWj+Fmv8Rg==}
+    peerDependencies:
+      react: '*'
     dependencies:
       react: 18.2.0
     dev: false
