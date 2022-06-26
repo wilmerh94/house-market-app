@@ -1,37 +1,37 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-import rentCategoryImage from '../assets/jpg/rentCategoryImage.jpg'
-import sellCategoryImage from '../assets/jpg/sellCategoryImage.jpg'
-import { Slider } from '../components/Slider/Slider'
+import React from 'react';
+import { Link } from 'react-router-dom';
+import rentCategoryImage from '../assets/jpg/rentCategoryImage.jpg';
+import sellCategoryImage from '../assets/jpg/sellCategoryImage.jpg';
+import { Slider } from '../components/Slider/Slider';
 
 export const Explore = () => {
   return (
-    <div className='explore'>
+    <div className="explore">
       <header>
-        <p className='pageHeader'>Explore</p>
+        <p className="pageHeader">Explore</p>
       </header>
       <main>
         <Slider />
-        <p className='exploreCategoryHeading'>Category</p>
-        <div className='exploreCategories'>
-          <Link to='/category/rent'>
+        <p className="exploreCategoryHeading">Category</p>
+        <div className="exploreCategories">
+          <Link to="/category/rent">
             <img
               src={rentCategoryImage}
-              alt='rent'
-              className='exploreCategoryImg'
+              alt="rent"
+              className="exploreCategoryImg"
             />
-            <p className='exploreCategoryName'>Place for rent</p>
+            <p className="exploreCategoryName">Place for rent</p>
           </Link>
-          <Link to='/category/sale'>
+          <Link to="/category/sale">
             <img
               src={sellCategoryImage}
-              alt='sell'
-              className='exploreCategoryImg'
+              alt="sell"
+              className="exploreCategoryImg"
             />
-            <p className='exploreCategoryName'>Place for sale</p>
+            <p className="exploreCategoryName">Place for sale</p>
           </Link>
         </div>
       </main>
     </div>
-  )
-}
+  );
+};

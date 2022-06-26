@@ -3,9 +3,9 @@ import { useAuthStatus } from '../../Hooks/useAuthStatus';
 import { Spinner } from '../Spinner/Spinner';
 
 export const PrivateRoute = () => {
- const { loggedIn, checkingStatus } = useAuthStatus();
- if (checkingStatus) {
-  return <Spinner />;
- }
- return loggedIn ? <Outlet /> : <Navigate to='/sign-in' />;
+  const { loggedIn, checkingStatus } = useAuthStatus();
+
+  if (checkingStatus) return <Spinner />;
+
+  return loggedIn ? <Outlet /> : <Navigate to="/sign-in" />;
 };

@@ -18,15 +18,13 @@ module.exports = {
   env: {
     browser: true,
     node: true,
-    es6: true,
-    'jest/globals': true
+    es6: true
   },
   root: true,
-  plugins: ['jest', 'react', 'module-resolver'],
+  plugins: ['react', 'module-resolver'],
   extends: [
     'eslint:recommended',
     'plugin:react/recommended',
-    'plugin:jest/recommended',
     'plugin:react-hooks/recommended',
     'plugin:import/errors',
     'plugin:import/warnings'
@@ -36,9 +34,19 @@ module.exports = {
   },
   parser: '@babel/eslint-parser',
   parserOptions: {
-    sourceType: 'module'
+    sourceType: 'module',
+    babelOptions: {
+      parserOpts: {
+        plugins: ['jsx']
+      }
+    }
   },
   rules: {
+    'react/react-in-jsx-scope': 'off',
+    'react/jsx-filename-extension': [
+      1,
+      { extensions: ['.js', '.jsx'] }
+    ],
     'brace-style': ['error', '1tbs', { allowSingleLine: false }],
     'no-multiple-empty-lines': ['error', { max: 1 }],
     'no-case-declarations': 0,
@@ -55,7 +63,6 @@ module.exports = {
       }
     ],
     'react/jsx-closing-tag-location': 'error',
-    'module-resolver/use-alias': 2,
     'react-hooks/exhaustive-deps': 'error',
     'react-hooks/rules-of-hooks': 'error',
     semi: ['error', 'always'],
